@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Supplier.SupplerManagementFormController">
+   <children>
+      <AnchorPane layoutX="-4.0" layoutY="-8.0" prefHeight="629.0" prefWidth="895.0" style="-fx-background-color: #000;">
+         <children>
+            <TableView fx:id="tblSupllier" layoutX="14.0" layoutY="272.0" prefHeight="306.0" prefWidth="877.0">
+              <columns>
+                <TableColumn fx:id="colsupplierid" prefWidth="75.0" text="SupplierId" />
+                <TableColumn fx:id="colname" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="colcompanyName" prefWidth="95.20001220703125" text="CompanyName" />
+                  <TableColumn fx:id="coladdress" prefWidth="69.5999755859375" text="Address" />
+                  <TableColumn fx:id="colcity" prefWidth="89.5999755859375" text="City" />
+                  <TableColumn fx:id="colprovince" prefWidth="107.199951171875" text="Province" />
+                  <TableColumn fx:id="colphone" prefWidth="100.0" text="Phone" />
+                  <TableColumn fx:id="colemail" prefWidth="137.60003662109375" text="Email" />
+                  <TableColumn fx:id="colpostalcode" prefWidth="117.60003662109375" text="Postalcode" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtsupplierId" layoutX="245.0" layoutY="46.0" />
+            <TextField fx:id="txtprovince" layoutX="656.0" layoutY="46.0" />
+            <TextField fx:id="txtphone" layoutX="656.0" layoutY="92.0" />
+            <TextField fx:id="txtpostalCode" layoutX="656.0" layoutY="210.0" />
+            <TextField fx:id="txtemail" layoutX="656.0" layoutY="156.0" />
+            <TextField fx:id="txtname" layoutX="245.0" layoutY="92.0" />
+            <TextField fx:id="txtcompanyName" layoutX="245.0" layoutY="143.0" />
+            <TextField fx:id="txtaddress" layoutX="245.0" layoutY="197.0" />
+            <TextField fx:id="txtcity" layoutX="245.0" layoutY="236.0" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="41.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="SupplierId" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="87.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="Name" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="142.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="Company Name" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="193.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="Address" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="231.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="City" />
+            <Label alignment="CENTER" layoutX="485.0" layoutY="50.0" prefHeight="26.0" prefWidth="105.0" style="-fx-background-color: F4F754;" text="Province" />
+            <Label alignment="CENTER" layoutX="485.0" layoutY="96.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="Phone" />
+            <Label alignment="CENTER" layoutX="485.0" layoutY="155.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="Email" />
+            <Label alignment="CENTER" layoutX="485.0" layoutY="210.0" prefHeight="26.0" prefWidth="106.0" style="-fx-background-color: F4F754;" text="PostalCode" />
+            <Button alignment="CENTER" layoutX="180.0" layoutY="590.0" mnemonicParsing="false" onAction="#btnaddSupplierOnaction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: E4004B;" text="Add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" layoutX="303.0" layoutY="590.0" mnemonicParsing="false" onAction="#btnupdateSupplierOnaction" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: E4004B;" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" layoutX="437.0" layoutY="590.0" mnemonicParsing="false" onAction="#btndeleteSupllierOnaction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: E4004B;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button alignment="CENTER" layoutX="565.0" layoutY="590.0" mnemonicParsing="false" onAction="#btnclearSupplierOnaction" prefHeight="26.0" prefWidth="88.0" style="-fx-background-color: E4004B;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

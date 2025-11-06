@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="348.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Item.ItemManagementFormController">
+   <children>
+      <AnchorPane prefHeight="494.0" prefWidth="878.0" style="-fx-background-color: #000;">
+         <children>
+            <TableView fx:id="tblItem" layoutX="17.0" layoutY="263.0" prefHeight="233.0" prefWidth="846.0">
+              <columns>
+                <TableColumn fx:id="Colitem_Code" prefWidth="75.0" text="Item Code" />
+                <TableColumn fx:id="Coldescription" prefWidth="274.39996337890625" text="Description" />
+                  <TableColumn fx:id="Colcategory" prefWidth="135.99993896484375" text="Category" />
+                  <TableColumn fx:id="Colquantity" prefWidth="235.199951171875" text="Quantity On Hand" />
+                  <TableColumn fx:id="Colunit_price" minWidth="0.0" prefWidth="124.800048828125" text="Unit Price" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="87.0" layoutY="101.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: F4F754;" text="Description" />
+            <Label alignment="CENTER" layoutX="87.0" layoutY="135.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: F4F754;" text="Category" />
+            <Label alignment="CENTER" layoutX="87.0" layoutY="164.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: F4F754;" text="Quantity" />
+            <Label alignment="CENTER" layoutX="87.0" layoutY="194.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: F4F754;" text="Unit Price" />
+            <Label alignment="CENTER" layoutX="87.0" layoutY="70.0" prefHeight="18.0" prefWidth="83.0" style="-fx-background-color: F4F754;" text="Item Code" />
+            <TextField fx:id="txtItemCode" layoutX="236.0" layoutY="63.0" />
+            <TextField fx:id="txtDescription" layoutX="236.0" layoutY="94.0" />
+            <TextField fx:id="txtCategory" layoutX="236.0" layoutY="128.0" />
+            <TextField fx:id="txtQuantity" layoutX="236.0" layoutY="157.0" />
+            <TextField fx:id="txtUnitprice" layoutX="236.0" layoutY="187.0" />
+            <Button layoutX="659.0" layoutY="160.0" mnemonicParsing="false" onAction="#btnitemDeleteOnAction" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: FF0066;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="568.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnitemUpdateOnAction" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: FF0066;" text="Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="478.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnItemaddOnAction" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: FF0066;" text="Add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="750.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnItemClear" prefHeight="26.0" prefWidth="91.0" style="-fx-background-color: FF0066;" text="Clear">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
