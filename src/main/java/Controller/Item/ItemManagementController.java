@@ -1,5 +1,6 @@
 package Controller.Item;
 
+import db.DBConnection;
 import Model.dto.ItemInfoDto;
 import javafx.collections.ObservableList;
 
@@ -11,7 +12,7 @@ import java.sql.SQLException;
 public class ItemManagementController implements ItemService {
     public void addItem(String Item_Code, String Description, String Category, int Qty, double UnitPrice) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakadesystem", "root", "20051216");
+            Connection connection= DBConnection.getInstance().getConnection();
             String SQL="INSERT INTO item  VALUES (?,?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setObject(1,Item_Code);
@@ -41,7 +42,7 @@ public class ItemManagementController implements ItemService {
     public void updateItem(String Item_Code, String Description, String Category, int Qty, double UnitPrice){
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakadesystem", "root", "20051216");
+            Connection connection=DBConnection.getInstance().getConnection();
             String SQL="UPDATE item SET Description=?,Category=?,QtyOnHand=?,UnitPrice=? WHERE ItemCode=?";
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             preparedStatement.setObject(1,Description);
@@ -60,7 +61,7 @@ public class ItemManagementController implements ItemService {
     public ObservableList<ItemInfoDto> getAllItems() {
         ObservableList<ItemInfoDto>itemDetails= javafx.collections.FXCollections.observableArrayList();
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakadesystem", "root", "20051216");
+            Connection connection=DBConnection.getInstance().getConnection();
             PreparedStatement pstm=connection.prepareStatement("SELECT * FROM item");
             java.sql.ResultSet resultSet=pstm.executeQuery();
             while (resultSet.next()){

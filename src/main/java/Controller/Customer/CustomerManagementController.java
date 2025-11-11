@@ -1,6 +1,6 @@
 package Controller.Customer;
 
-import Controller.db.DBConnection;
+import db.DBConnection;
 import Model.dto.CustomerInfoDto;
 import javafx.collections.ObservableList;
 

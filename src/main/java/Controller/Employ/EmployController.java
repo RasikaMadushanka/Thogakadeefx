@@ -1,6 +1,6 @@
 package Controller.Employ;
 
-import Controller.db.DBConnection;
+import db.DBConnection;
 import Model.dto.EmployDto;
 import javafx.collections.ObservableList;
 

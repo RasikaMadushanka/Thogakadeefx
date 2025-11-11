@@ -1,6 +1,6 @@
 package Controller.Supplier;
 
-import Controller.db.DBConnection;
+import db.DBConnection;
 import Model.dto.SupplierInfoDto;
 import javafx.collections.ObservableList;
 
@@ -75,7 +75,7 @@ public class SupplierManagementController implements SupplierService {
     public ObservableList<SupplierInfoDto> getAllSuppliers() {
         ObservableList<SupplierInfoDto> supplierInfoDtos= javafx.collections.FXCollections.observableArrayList();
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/thogakadesystem", "root", "20051216");
+            Connection connection=DBConnection.getInstance().getConnection();
             PreparedStatement preparedStatement=connection.prepareStatement("SELECT * FROM Supplier");
             ResultSet resultSet=preparedStatement.executeQuery();
             while (resultSet.next()){
