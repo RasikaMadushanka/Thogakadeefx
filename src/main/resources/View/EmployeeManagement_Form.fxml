@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="626.0" prefWidth="895.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Employ.EmployFormController">
+<AnchorPane prefHeight="626.0" prefWidth="895.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
    <children>
       <TableView fx:id="tblEmployee" layoutX="28.0" layoutY="290.0" prefHeight="327.0" prefWidth="846.0">
         <columns>

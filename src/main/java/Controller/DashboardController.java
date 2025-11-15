@@ -26,7 +26,7 @@ public class DashboardController {
     void btnEmployerOnAction(ActionEvent event) {
         Stage stage=new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/EmployeeManagement_Form.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(""))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -49,7 +49,7 @@ public class DashboardController {
     void btnSupplierOnAction(ActionEvent event) {
         Stage stage =new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/View/SupplierManagementForm.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource(""))));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
